@@ -1,27 +1,29 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
+import zakir from './Image/zakir.jpg'
+import keerthi from './Image/keerthi.jpg'
 
 const App = () => {
   const [list] = useState([
     {
       name: "Keerthi",
-      image: "https://via.placeholder.com/150",
+      image: `${keerthi}`,
       dob: "1996-12-21", // Ensure the date format is YYYY-MM-DD
     },
     {
       name: "Achu",
-      image: "https://via.placeholder.com/150",
+      image: "",
       dob: "1997-04-08", // Ensure the date format is YYYY-MM-DD
     },
     {
       name: "Zakir",
-      image: "https://via.placeholder.com/150",
+      image: `${zakir}`,
       dob: "1996-01-01", // Ensure the date format is YYYY-MM-DD
     },
     {
-      name: "Zakirkeerthi",
-      image: "https://via.placeholder.com/150",
+      name: "Zakir AV",
+      image: `${zakir}`,
       dob: "1996-01-15", // Ensure the date format is YYYY-MM-DD
     },
   ]);
@@ -76,7 +78,7 @@ const App = () => {
         <section className="container">
           <article>
             <div className="upcomeing">
-              <h3>birthdays today</h3>
+              {/* <h3>birthdays today</h3> */}
               <button onClick={showUpcomingBirthdays}>
                 Show Upcoming Birthdays
               </button>
@@ -90,7 +92,7 @@ const App = () => {
               // console.log(item.name);
 
               <article className="person" key={index}>
-                <img src="https://via.placeholder.com/150" alt="" />
+                <img src={item.image} alt="" />
 
                 <div>
                   <h4>{item.name}</h4>
