@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import zakir from './Image/zakir.jpg'
+import zakir from './Image/kk.jpg'
 import keerthi from './Image/keerthi.jpg'
 
 const App = () => {
