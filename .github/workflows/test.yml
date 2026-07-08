@@ -1,0 +1,17 @@
+name: Run Tests
+
+on: push   # trigger — runs when you push code
+
+jobs:
+  test:
+    runs-on: ubuntu-latest   # the virtual machine
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
